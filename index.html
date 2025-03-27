@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaves Status</title>
+    <style>
+      /* General body styling */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #333333;
+      }
+
+      /* Header styling with proper alignment */
+      header {
+        background-color: #ffffff;
+        color: #003366;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #cccccc;
+      }
+
+      /* Left section of header (BITS Pilani logo) */
+      header .logo-section {
+        display: flex;
+        align-items: center;
+      }
+
+      header .logo-section img {
+        height: 75px;
+      }
+
+      header .logo-section .logo-text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+
+      header .logo-section .logo-text h2 {
+        margin: 0;
+        font-size: 22px;
+        color: #003366;
+      }
+
+      header .logo-section .logo-text p {
+        margin: 0;
+        font-size: 16px;
+        color: #003366;
+      }
+
+      /* Right section of header (SWD text) */
+      header .swd-section {
+        text-align: right;
+      }
+
+      header .swd-section h1 {
+        font-size: 28px;
+        margin: 0;
+        color: #003366;
+      }
+
+      /* Navigation bar styling */
+      nav {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #cccccc;
+      }
+
+      nav a {
+        text-decoration: none;
+        padding: 0 20px;
+        color: #003366;
+        font-weight: bold;
+        position: relative;
+      }
+
+      /* Vertical separators between nav items */
+      nav a:not(:last-child)::after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        color: #003366;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Welcome and logout section */
+      .user-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #f9f9f9;
+      }
+
+      .user-info .welcome {
+        color: #003366;
+        font-weight: bold;
+      }
+
+      .user-info .date-logout {
+        text-align: right;
+      }
+
+      .user-info .date-logout a {
+        color: #003366;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Content section */
+      .content {
+        padding: 20px;
+      }
+
+      .content h2 {
+        text-align: center;
+        color: #003366;
+        margin-bottom: 20px;
+      }
+
+      /* Table styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table th,
+      table td {
+        border: 1px solid #cccccc;
+        padding: 8px;
+        text-align: center;
+      }
+
+      table th {
+        background-color: #f4f4f4;
+        color: #000000;
+        font-weight: bold;
+      }
+
+      table td a {
+        color: #003366;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .status-approved {
+        color: darkgreen;
+        font-weight: bold;
+      }
+
+      .status-pending {
+        color: orange;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with BITS Pilani logo on left and SWD on right -->
+    <header>
+      <div class="logo-section">
+        <img src="./BITS_Pilani_campus_logo.gif" alt="BITS Pilani Logo" />
+        <div class="logo-text"></div>
+      </div>
+      <div class="swd-section">
+        <h1>Student Welfare Division (SWD)</h1>
+      </div>
+    </header>
+
+    <!-- Navigation bar with vertical separators -->
+    <nav>
+      <a href="#">Apply For Leaves</a>
+      <a href="#">Download Parent's Consent Form</a>
+      <a href="#">Leaves Status</a>
+    </nav>
+
+    <!-- Welcome and logout section -->
+    <div class="user-info">
+      <div class="welcome">Welcome, RAJ BHASKAR</div>
+      <div class="date-logout">
+        Saturday, March 15, 2025 | <a href="#">[Logout]</a>
+      </div>
+    </div>
+
+    <!-- Content section -->
+    <div class="content">
+      <h2>Leaves Status</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Sr No.</th>
+            <th>IDNO</th>
+            <th>Name</th>
+            <th>Hostel</th>
+            <th>Room No.</th>
+            <th>Departure Date</th>
+            <th>Return Date</th>
+            <th>Leave Reason</th>
+            <th>Application Status</th>
+            <th>Leaves Applied On</th>
+            <th>Action</th>
+            <th>Download Leave Approval</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2022A3PS0381P</td>
+            <td>RAJ BHASKAR</td>
+            <td>Shankar Bhawan</td>
+            <td>3104</td>
+            <td>15-Mar-2025</td>
+            <td>18-Mar-2025</td>
+            <td>Personal Reason.</td>
+            <td class="status-approved">Approved</td>
+            <td>24-Oct-2024</td>
+            <td><a href="#">View Details</a></td>
+            <td><a href="#">Download Leave Approval</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2022A3PS0381P</td>
+            <td>RAJ BHASKAR</td>
+            <td>Shankar Bhawan</td>
+            <td>3104</td>
+            <td>28-Oct-2024</td>
+            <td>04-Nov-2024</td>
+            <td>Personal Reason.</td>
+            <td class="status-approved">Approved</td>
+            <td>24-Oct-2024</td>
+            <td><a href="#">View Details</a></td>
+            <td><a href="#">Download Leave Approval</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
